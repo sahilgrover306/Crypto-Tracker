@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+.dropbtn {
+    background-color: #563f46;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: white;
+}
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+.footer {
+  background-color: #563f46;
+  color: white;
+  margin: 0px auto;
+  padding: 20px 0px;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    padding-left: 700px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.jumbotron {
+  margin: 0px auto;
+  padding: 70px 30px;
+  background: #563f46;
+  color: floralwhite;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+   
+    <header class="jumbotron">
+        <div class="container">
+
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Crypto-Tracker</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    
+						<img src="{% static 'image/sahil.png' %}" alt="My image" height="280" width="450">
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+<div class="dropdown">
+	<button onclick="myFunction()" class="dropbtn">Select Coin</button>
+  		<div id="myDropdown" class="dropdown-content">
+    		<a href="bitcoin/">Bitcoin</a>
+    		<a href="ethereum/">Ethereum</a>
+    		<a href="litecoin/">LiteCoin</a>
+  		</div>
+</div>
+<footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              121, Clear Water Bay Road<br>
+		              Clear Water Bay, Kowloon<br>
+		              HONG KONG<br>
+		              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                      <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                      <i class="fa fa-envelope fa-lg"></i>: 
+                      <a href="mailto:confusion@food.net">confusion@food.net</a>
+		           </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+   					<div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+
+                    </div>
+                </div>
+                
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright Crypto-Tracker</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
